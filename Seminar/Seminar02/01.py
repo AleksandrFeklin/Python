@@ -27,3 +27,7 @@ match a:
         print("Тройка")
     case _:
         print("Не единица, не двойка и не тройка")
+
+
+# lst = [i for i in range(-5, 6)]
+# print(len(lst))
