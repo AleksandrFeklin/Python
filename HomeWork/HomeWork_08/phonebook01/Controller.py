@@ -9,6 +9,7 @@ def main_menu():
         print("2. Удалить контакт")
         print("3. Изменить контакт")
         print("4. Найти контакт")
+        print("5. Показать все контакты")
         print("8. Сохранить файл")
         print("0. Выйти из программы")
         choice = int(input("Выберите пункт: "))
@@ -25,6 +26,9 @@ def main_menu():
             case 4:
                 search_contact()
                 print("\nКонтакт найден!\n")
+            case 5:
+                show_contacts()
+                print("\nВсе Контакты!\n")
             case 8:
                 save_file()
                 print("\nФайл сохранен!\n")
@@ -83,3 +87,7 @@ def search_contact():
     for i, item in enumerate(Model.phonebook):
         if choice in item:
             print(i, item)
+            
+def show_contacts():
+    open_file()
+    View.printPhoneBook()
